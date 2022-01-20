@@ -15,7 +15,7 @@ const Map = styled(MapView)`
 `;
 const SomeText = styled.Text``;
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { restaurants = [] } = useContext(RestaurantsContext);
 
@@ -51,7 +51,7 @@ export const MapScreen = () => {
             }}
           >
             <MapView.Callout
-            onPress={() => null}>
+            onPress={() => navigation.navigate("RestaurantDetail", { restaurant: restaurant})}>
               <View>
                 <MapCallout restaurant={restaurant} />
               </View>
