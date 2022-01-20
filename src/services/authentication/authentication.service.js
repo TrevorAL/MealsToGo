@@ -1,14 +1,12 @@
 import { initializeApp } from "firebase/app";
-
-import {
-  getAuth,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import * as firebase from "firebase";
 
 
 
-export const loginRequest = (email, password) => 
-    signInWithEmailAndPassword(auth, email, password)
-   
+// export const loginRequest = (email, password) =>
+//     signInWithEmailAndPassword( getAuth(), email, password) ;
+
+    export const loginRequest = (email, password) =>
+    firebase.auth().signInWithEmailAndPassword(email, password);
 

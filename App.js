@@ -2,6 +2,7 @@ import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components/native";
 import { initializeApp } from "firebase/app";
+import * as firebase from "firebase";
 
 import {
   getAuth,
@@ -29,9 +30,11 @@ const firebaseConfig = {
   appId: "1:254831758633:web:116e62d06ae3f3022e7b38"
 };
 
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
 
 
 export default function App() {
