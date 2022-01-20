@@ -14,7 +14,7 @@ const [drinksExpanded, setDrinksExpanded] = useState(false);
   const { restaurant } = route.params;
   return (
     <SafeArea>
-      <RestaurantInfoCard restaurant={restaurant} />
+      <RestaurantInfoCard restaurant={restaurant}  />
       <ScrollView>
         <List.Accordion
           title="Breakfast"
