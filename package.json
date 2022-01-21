@@ -22,6 +22,7 @@
     "antd": "^4.18.4",
     "camelize": "^1.0.0",
     "expo": "~44.0.0",
+    "expo-camera": "~12.1.0",
     "expo-font": "~10.0.4",
     "expo-status-bar": "~1.2.0",
     "firebase": "^8.0.0",
