@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
+import { TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 import { List, Avatar } from "react-native-paper";
 
@@ -22,21 +22,21 @@ export const SettingsScreen = ({ navigation }) => {
     <SafeArea>
       <AvatarContainer>
         <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
-            <Avatar.Icon size={180} icon="camera" backgroundColor="#2182BD" />
+          <Avatar.Icon size={180} icon="camera" backgroundColor="#2182BD" />
         </TouchableOpacity>
         <Spacer position="top" size="large">
           <Text variant="label">{user.email}</Text>
         </Spacer>
       </AvatarContainer>
+
       <List.Section>
         <SettingsItem
-          title="Favorites"
-          description="View your favorites"
+          title="Favourites"
+          description="View your favourites"
           left={(props) => <List.Icon {...props} color="black" icon="heart" />}
-          onPress={() => navigation.navigate("Favorites")}
+          onPress={() => navigation.navigate("Favourites")}
         />
         <SettingsItem
-          style={{ padding: 16 }}
           title="Logout"
           left={(props) => <List.Icon {...props} color="black" icon="door" />}
           onPress={onLogout}
